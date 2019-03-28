@@ -13,8 +13,6 @@ module.exports = {
         path: `${__dirname}/static`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
