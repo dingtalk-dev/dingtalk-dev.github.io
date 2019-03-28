@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import Disqus from 'disqus-react';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -10,13 +11,20 @@ function Post({ data }) {
   const post = data.markdownRemark;
   const frontmatter = post.frontmatter;
 
+  const disqusConfig = {
+    url: 'https://dingtalk-dev.github.io' + frontmatter.path,
+    identifier: frontmatter.path,
+    title: frontmatter.title,
+  };
+
   return (
     <Layout title={frontmatter.title} subtitle={siteTitle}>
       <SEO title={frontmatter.title} keywords={[`developer`, `blog`, `alibaba`, `dingtalk`, `ios`, `mac`]} />
       <article dangerouslySetInnerHTML={{ __html: post.html }} />
-      <div style={{ marginTop: '1rem', fontSize: '0.8rem', color: '#aaa' }}>
+      <div style={{ marginTop: '1rem', marginBottom: '1rem', fontSize: '0.8rem', color: '#aaa' }}>
         由 {frontmatter.author} 发布于 <FormattedDate dateString={frontmatter.date} />
       </div>
+      <Disqus.DiscussionEmbed shortname="dingtalk-dev" config={disqusConfig} />
     </Layout>
   );
 }
@@ -35,7 +43,8 @@ export const pageQuery = graphql`
       frontmatter {
         title,
         date,
-        author
+        author,
+        path
       }
     }
   }
