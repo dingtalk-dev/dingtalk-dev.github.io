@@ -42,10 +42,12 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  color: inherit;
 }
 a:active,
 a:hover {
   outline-width: 0;
+  color: #3296fa;
 }
 abbr[title] {
   border-bottom: none;
@@ -200,7 +202,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', 'Source Han Sans SC', 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -617,6 +619,34 @@ pre tt:after {
 }
 @media only screen and (max-width: 480px) {
   html {
-    font-size: 100%;
+    font-size: 90%;
   }
+}
+
+/* Custom styles: */
+footer {
+  background: #3b3e43;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+.footer-col {
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  color: #b7b7b7;
+}
+
+.footer-col>h1 {
+  color: #fff;
+}
+
+.footer-col>a {
+  margin: 3px 0;
 }

@@ -1,0 +1,17 @@
+.post-item {
+  margin-bottom: 2.6rem;
+}
+
+.post-item>h1 {
+  margin: 0 0 0.4rem 0;
+  font-size: 2rem;
+}
+
+.post-item>span {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.post-item>p {
+  margin: 0.3rem 0;
+}
