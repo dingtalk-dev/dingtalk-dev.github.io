@@ -1,0 +1,25 @@
+version: 2
+jobs:
+  build:
+    branches:
+      only:
+        - dev
+    docker:
+      - image: circleci/node:11.6
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: git checkout dev
+      - run: npm install
+      - run: npm run build
+      - add_ssh_keys:
+          fingerprints:
+            - "a3:67:20:a9:0b:bb:57:09:e0:da:8c:ab:61:96:1a:7d"
+      - deploy:
+          command: |
+            cd public
+            git init
+            git add .
+            git commit -m 'CI deploy commit'
+            git remote add origin git@github.com:dingtalk-dev/dingtalk-dev.github.io.git
+            git push origin master -f
