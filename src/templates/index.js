@@ -16,8 +16,6 @@ const IndexPage = React.memo(({ data }) => {
     }
   ));
 
-  console.log(posts);
-
   return (
     <Layout>
       <SEO title="" keywords={[`developer`, `blog`, `alibaba`, `dingtalk`, `ios`, `mac`]} />
