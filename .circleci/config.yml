@@ -17,6 +17,8 @@ jobs:
             - "a3:67:20:a9:0b:bb:57:09:e0:da:8c:ab:61:96:1a:7d"
       - deploy:
           command: |
+            git config --global user.email "unixzii@gmail.com"
+            git config --global user.name "Cyandev"
             cd public
             git init
             git add .
