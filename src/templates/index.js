@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import GA from '../components/ga';
 import PostItem from '../components/post-item';
 
 const IndexPage = React.memo(({ data }) => {
@@ -18,6 +19,7 @@ const IndexPage = React.memo(({ data }) => {
 
   return (
     <Layout>
+      <GA />
       <SEO title="" keywords={[`developer`, `blog`, `alibaba`, `dingtalk`, `ios`, `mac`]} />
       <div>
         {posts.map(p => (
