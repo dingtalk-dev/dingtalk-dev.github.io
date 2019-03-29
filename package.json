@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "dingtalk-dev-blog",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "The DingTalk developer blog.",
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
@@ -22,11 +22,9 @@
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
+    "gray-matter": "^4.0.2",
     "prettier": "^1.16.4"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -35,13 +33,14 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "lint": "node scripts/lint.js src/pages",
     "deploy": "sh scripts/deploy.sh"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/dingtalk-dev/dingtalk-dev.github.io"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/dingtalk-dev/dingtalk-dev.github.io/issues"
   }
 }
