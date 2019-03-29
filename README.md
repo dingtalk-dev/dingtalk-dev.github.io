@@ -1,4 +1,4 @@
-# [https://dingtalk-dev.github.io](https://dingtalk-dev.github.io) Source
+# [dingtalk-dev.github.io](https://dingtalk-dev.github.io) Source
 
 [![CircleCI](https://circleci.com/gh/dingtalk-dev/dingtalk-dev.github.io/tree/dev.svg?style=svg)](https://circleci.com/gh/dingtalk-dev/dingtalk-dev.github.io/tree/dev)
 
