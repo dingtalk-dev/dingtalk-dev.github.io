@@ -21,8 +21,20 @@ bla bla bla bla.
 * List item 3
 * List item 4
 
-```
-Code block
+```objectivec
+#import <UIKit/UIKit.h>
+
+@interface Test : NSObject
+@property (nonatomic) NSString *test;
+@end
+
+@implementation Test
+
+- (void)foo {
+  [Bar doSomething];
+}
+
+@end
 ```
 
 This is `inline code` test.

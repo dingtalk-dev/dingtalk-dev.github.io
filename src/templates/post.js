@@ -7,6 +7,9 @@ import SEO from '../components/seo';
 import GA from '../components/ga';
 import FormattedDate from '../components/formatted-date';
 
+import 'prismjs/themes/prism.css'
+import './post.css'
+
 function Post({ data }) {
   const siteTitle = data.site.siteMetadata.title;
   const post = data.markdownRemark;
